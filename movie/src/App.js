@@ -6,17 +6,16 @@ class App extends React.Component{
     count : 0,
   }
   add = ()=>{
-    return count +1;
+    this.setState(current => ({count : current.count+1}))
   }
   minus = ()=>{
-    return count-1;
+    this.setState({count : this.state.count-1})
   }
-  render(){
-    let a = 3;
+  render(){//setState를 사용시 렌더시 호출             
     return( 
     <>
-    <h1>i am class component {a}</h1>
-    <button onCLick={this.add}>
+    <h1>i am class component {this.state.count}</h1>
+    <button onClick={this.add}>
       Add
     </button>
     <button onClick={this.minus}>
