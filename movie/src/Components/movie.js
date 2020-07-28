@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import "./movie.css";
 function Movie({ year, title, summary, poster, genres}) {
   return (
     <div className="movies_move">
-        <label  htmlFor/>
+      <label  htmlFor/>
       <img src={poster} alt={title} title={"영화 이미지"}></img>
       <div className="movie_date">
         <h3 className="movie_title">{title}</h3>
@@ -13,7 +13,7 @@ function Movie({ year, title, summary, poster, genres}) {
         {genres.map((genre,index) =>{
             return (<li className="genres_genres" key={index}>{genre}</li>);
         })}
-        <p className="movie_summary">{summary}</p> 
+        <p className="movie_summary">{summary.slice(0,140)}...</p> 
       </div>
     </div>
   );

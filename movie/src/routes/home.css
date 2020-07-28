@@ -1,0 +1,17 @@
+body{
+    margin :0;
+}
+.loade{
+    display: flex;
+}
+.loader_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-size: 100px;
+}
+.cmovies{
+    display: flex;
+}
