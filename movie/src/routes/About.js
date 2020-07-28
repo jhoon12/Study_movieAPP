@@ -1,7 +1,7 @@
 import React from "react";
 
 function About(){
-    return(<span>About this page</span>)
+    return(<span>jaehoon's</span>)
 }
 
 export default About
