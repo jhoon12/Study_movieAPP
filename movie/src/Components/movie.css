@@ -1,9 +1,13 @@
 html{
     display: flex;
+    margin: 0;
 }
 .movies_move{
     align-items: center;
 }
 .movies{
     display: flex;
+}
+.movie_summary{
+    font-size: 17;
 }

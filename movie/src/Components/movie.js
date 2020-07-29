@@ -1,8 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./movie.css";
+import {Link} from  "react-router-dom";
 function Movie({ year, title, summary, poster, genres}) {
   return (
+    <Link to={{
+     pathname:'/movie-detail',
+    state:{
+      year,
+      title,
+      summary,
+      poster,
+      genres
+    }}}>
     <div className="movies_move">
       <label  htmlFor/>
       <img src={poster} alt={title} title={"영화 이미지"}></img>
@@ -11,11 +21,12 @@ function Movie({ year, title, summary, poster, genres}) {
         <h3 className="movie_year">{year}</h3>
         <ul className = "genres"></ul>
         {genres.map((genre,index) =>{
-            return (<li className="genres_genres" key={index}>{genre}</li>);
+            return (<li className="genres_genres" key={index}> {genre}</li>);
         })}
         <p className="movie_summary">{summary.slice(0,140)}...</p> 
       </div>
     </div>
+    </Link>
   );
 }
 
