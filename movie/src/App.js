@@ -10,7 +10,7 @@ function App() {
       <Navigation ></Navigation>
       <Route path="/" exact={true} component={home}></Route>
       <Route path="/about" component={about}></Route>
-      <Route path="/Movie-detail" component={Details}></Route>
+      <Route path="/Movie/:id" component={Details}></Route>
       {/* path의 주소와 같을 때 보여줌 */}
     </BrowserRouter>
   );
